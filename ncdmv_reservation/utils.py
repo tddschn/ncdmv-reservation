@@ -49,7 +49,7 @@ def get_ncdmv_driver_license_office_availability_html() -> str:
 # automate_browser_tasks()
 
 
-def extract_divs_to_dict_final(html_content):
+def extract_divs_to_dict(html_content):
     # Parse the HTML content using BeautifulSoup
     soup = BeautifulSoup(html_content, "html.parser")
 

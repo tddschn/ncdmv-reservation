@@ -23,7 +23,7 @@ def get_args():
     return parser.parse_args()
 
 
-def extract_divs_to_dict_final(html_content):
+def extract_divs_to_dict(html_content):
     # Parse the HTML content using BeautifulSoup
     soup = BeautifulSoup(html_content, "html.parser")
 
@@ -72,7 +72,7 @@ def main():
 
     args = get_args()
     html_content = args.html_file.read_text()
-    extracted_data = extract_divs_to_dict_final(html_content)
+    extracted_data = extract_divs_to_dict(html_content)
     import json
 
     print(json.dumps(extracted_data, indent=4, ensure_ascii=False))

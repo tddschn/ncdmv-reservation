@@ -8,14 +8,19 @@ Purpose: Why not?
 import argparse
 from pathlib import Path
 
+from utils import (
+    get_ncdmv_driver_license_office_availability_html,
+    extract_divs_to_dict,
+)
+
 
 def get_args():
     """Get command-line arguments"""
 
     parser = argparse.ArgumentParser(
-        description='Why not?',
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-
+        description="get ncdmv driver license office availability",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
 
     return parser.parse_args()
 
@@ -24,7 +29,12 @@ def main():
     """Make a jazz noise here"""
 
     args = get_args()
+    html_content = get_ncdmv_driver_license_office_availability_html()
+    extracted_data = extract_divs_to_dict(html_content)
+    import json
+
+    print(json.dumps(extracted_data, indent=4, ensure_ascii=False))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
