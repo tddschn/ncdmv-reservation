@@ -31,9 +31,11 @@ while (("$#")); do
 done
 
 if [ ! -f ncdmv.html ]; then
-    pytest test_27606.py
+    echo "Running test with selenium..." >&2
+    pytest test_ncdmv.py
 fi
 if [ ! -f ncdmv.json ]; then
+    echo 'extracting results...' >&2
     ./ncdmv_results_to_json.py ncdmv.html | tee ncdmv.json
 fi
 jq <ncdmv.json --arg office_name "$office_name" '.[] | select(.office_name == $office_name) | .is_reservable' -r

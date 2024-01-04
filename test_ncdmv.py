@@ -34,3 +34,8 @@ class Test27606:
         wait.until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, ".input-results"))
         ).click()
+
+        # save html
+        with open("ncdmv.html", "w") as f:
+            f.write(self.driver.page_source)
+            print(f"HTML saved to {f.name}")
