@@ -2,14 +2,20 @@ from bs4 import BeautifulSoup
 import re
 
 
-def get_ncdmv_driver_license_office_availability_html() -> str:
+def get_ncdmv_driver_license_office_availability_html(headless: bool = True) -> str:
     from selenium import webdriver
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as EC
     from selenium.webdriver.common.by import By
 
     # Setup
-    driver = webdriver.Chrome()
+    from selenium.webdriver.chrome.options import Options
+
+    options = Options()
+    if headless:
+        options.add_argument("--headless")
+
+    driver = webdriver.Chrome(options=options)
 
     try:
         # Browser actions
