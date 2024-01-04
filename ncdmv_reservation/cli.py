@@ -8,7 +8,7 @@ Purpose: Why not?
 import argparse
 from pathlib import Path
 
-from utils import (
+from ncdmv_reservation.utils import (
     get_ncdmv_driver_license_office_availability_html,
     extract_divs_to_dict,
 )

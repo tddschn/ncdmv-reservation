@@ -9,6 +9,8 @@ homepage = "https://github.com/tddschn/ncdmv-reservation"
 repository = "https://github.com/tddschn/ncdmv-reservation"
 classifiers = ["Topic :: Utilities"]
 keywords = ["ncdmv"]
+packages = [{ include = "ncdmv_reservation" }]
+
 
 [tool.poetry.scripts]
 ncdmv-driver-license-office-availability = "ncdmv_reservation.cli:main"
