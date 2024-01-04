@@ -12,6 +12,7 @@ class Test27606:
 
     def test_27606(self):
         self.driver.get(
+            # "https://skiptheline.ncdot.gov/Webapp/Appointment/Index/a7ade79b-996d-4971-8766-97feb75254de"
             "https://skiptheline.ncdot.gov/Webapp/Appointment/Index/a7ade79b-996d-4971-8766-97feb75254de"
         )
         self.driver.set_window_size(1280, 775)
