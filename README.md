@@ -2,7 +2,9 @@
 
 > Dealing with DMV is often a frustrating experience. But it doesn't have to be!
 
-Automated availability checking and monitoring for DMV offices across the state of North Carolina
+Automated availability checking and monitoring for DMV offices across the state of North Carolina, tested to work on Jan 2024.
+
+No feature will be added unless I need it myself. If you need additional features, you're welcome to contribute a PR. :)
 
 https://teddysc.me/blog/ncdmv-reservation
 
