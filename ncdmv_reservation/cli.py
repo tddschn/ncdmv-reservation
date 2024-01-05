@@ -22,6 +22,8 @@ def get_args():
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
 
+    parser.add_argument("-H", "--no-headless", help="show browser", action="store_true")
+
     return parser.parse_args()
 
 
@@ -29,7 +31,9 @@ def main():
     """Make a jazz noise here"""
 
     args = get_args()
-    html_content = get_ncdmv_driver_license_office_availability_html()
+    html_content = get_ncdmv_driver_license_office_availability_html(
+        headless=not args.no_headless
+    )
     extracted_data = extract_divs_to_dict(html_content)
     import json
 
