@@ -6,6 +6,19 @@ Automated availability checking and monitoring for DMV offices across the state 
 
 https://teddysc.me/blog/ncdmv-reservation
 
+- [NC DMV Reservation Tools](#nc-dmv-reservation-tools)
+  - [Background](#background)
+  - [Quick Start](#quick-start)
+    - [Installation](#installation)
+    - [Running](#running)
+  - [How it works](#how-it-works)
+  - [Continuous Monitoring](#continuous-monitoring)
+    - [On your local machine](#on-your-local-machine)
+    - [GitHub Actions](#github-actions)
+  - [Thoughts](#thoughts)
+  - [Develop](#develop)
+  - [Links](#links)
+
 ## Background
 
 DMVs within reasonable distance of where I live are always completely booked, so I made this tool to help me spot when someone cancelled their appointment so I could snag it.
@@ -134,3 +147,9 @@ $ git clone https://github.com/tddschn/ncdmv-reservation.git
 $ cd ncdmv-reservation
 $ poetry install
 ```
+
+## Links
+
+- Blog post: https://teddysc.me/blog/ncdmv-reservation
+- Source code: https://github.com/tddschn/ncdmv-reservation
+- PyPI: https://pypi.org/project/ncdmv-reservation/
