@@ -1,5 +1,7 @@
 # NC DMV Reservation Tools
 
+> Dealing with DMV is often a frustrating experience. But it doesn't have to be!
+
 Automated availability checking and monitoring for DMV offices across the state of North Carolina
 
 https://teddysc.me/blog/ncdmv-reservation
